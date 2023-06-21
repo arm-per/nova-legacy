@@ -1,0 +1,35 @@
+<div class="row justify-content-center">
+    <div class="col-12 col-md-6">
+        <form [formGroup]="editorForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <input type="text" formControlName="titulo" class="form-control" placeholder="Título de post">
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="validatedCustomFile" accept="image/*" (change)="agregarImagen($event)"  required>
+                <label class="custom-file-label" for="validatedCustomFile">Seleccionar Banner</label>
+                <div class="invalid-feedback">Example invalid custom file feedback</div>
+            </div>
+            <hr>
+            <div class="form-group">
+                <quill-editor [modules]="configModules"  
+                            formControlName="editor"      
+                            name="editor" 
+                            (ngModelChange)="editorActual($event)"
+                            placeholder="Contenido del artículo.">
+                </quill-editor>  
+            </div>   
+            <hr>
+            <div class="form-group">
+                <input type="text" formControlName="categoria" class="form-control" placeholder="Categorias">
+            </div>
+            <button type="submit" class="btn btn-secondary">{{ buttonText }}</button>
+        </form>
+    </div>
+    <div class="col-12 col-md-6">
+        <h3>Vista previa</h3>
+        <div *ngIf="imageUrl != null" class="ratio-16-9 col-12" [style.background-image]="'url(' + imageUrl +')'"></div>
+        <div class="container">
+            <div class="ql-editor small-text py-1 px-2" [innerHTML]='sanitizer.bypassSecurityTrustHtml( this.htmlEditor )'></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        
+        <div class="col-md-6 col-sm-12 form-group login-container">
+            <div class="logo-image">
+                <img src="../../../../assets/nova_web_1_1.png" alt="">
+            </div>
+            <form (ngSubmit)="login(loginForm)" #loginForm="ngForm" class="mb-2">
+                <h4 class=" text-center mt-2">Iniciar Sesión</h4>
+                <div class="form-group">
+                    <label for="email">Correo electronico</label>
+                    <input ngModel name="email" email type="email" #emailInput="ngModel" class="form-control" id="email" required>
+                    <div [hidden]="emailInput.valid || emailInput.pristine" class="alert alert-danger">
+                        Porfavor Ingresa una dirección de correo válida 
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña </label>
+                    <!--<a class="link-form-ref" href="#">¿Olvidaste tu contraseña?</a> -->
+                    <input ngModel name="password" type="password" class="form-control" id="password" minlength="6" #pwInput="ngModel" required>
+                    <div [hidden]="pwInput.valid || pwInput.pristine" class="alert alert-danger">
+                        Tu contraseña debe contener al menos 6 caracteres 
+                    </div>
+                    <span>{{ pwInput.value?.length }} / 6</span>
+                </div>
+                <div class="alert alert-danger" *ngIf="errorMessage.length > 0">
+                    {{errorMessage}}
+                </div>
+                <button type="submit" [ngClass]="{'disabled': !loginForm.form.valid}" class="col-12 btn btn-primary" [disabled]="!loginForm.form.valid">Ingresar</button>
+            </form>
+        </div>
+    </div>
+</div>

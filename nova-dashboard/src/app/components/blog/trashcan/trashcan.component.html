@@ -1,0 +1,29 @@
+<h3>Artículos Eliminados</h3>
+<p>Papelera {{totalArtArchive}}</p>
+<div class="table-responsive-md">
+    <table class="table table-borderless table-hover">
+        <thead>
+            <tr>
+                <th class="">Título</th>
+                <th class="text-center">Categoria</th>
+                <th class="text-center">Comentarios</th>
+                <th class="text-center">Fecha</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let articulo of archiveArticulos">
+                <td>{{ articulo.titulo }}</td>
+                <td class="text-center">{{ articulo.categoria }}</td>
+                <td class="text-center">1</td>
+                <td class="text-center">{{ 2019-10-15 | date:'dd/MM/yyyy' }}</td>
+                <td>
+                    <div class="row justify-content-center">
+                        <button class="mx-1 btn btn-sm btn-danger" (click)="editStatus('delete', articulo.id, articulo)"><i class="mdi mdi-delete"></i></button>
+                        <button class="mx-1 btn btn-sm btn-primary" (click)="editStatus('restore', articulo.id , articulo)"><i class="mdi mdi-backup-restore"></i></button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,26 @@
+<header>
+    <div class="menu_bar" (click)="toggleMenu()" >
+        <a [routerLink]="" class="bt-menu"><span class="fa fa-bars"></span>Menú</a>
+    </div>
+
+    <nav class="row justify-content-center no-margin" [ngClass]="isMenuOpen ? 'openMenuMobile' : 'closeMenuMobile'">
+        <ul class="p-0 navbar-center">
+            <img (click)="onClickHome()" class="my-2 mx-3" width="70px" src="./assets/logos/nova_blanco.png" alt="" >
+            <li><a href="#servicios" (click)="toggleMenu()">SERVICIOS</a></li>
+            <li><a href="http://labnovaeclipse.ddns.net:9090/EclipseWeb/login" target="_blanc" (click)="toggleMenu()">RESULTADOS EN LÍNEA</a></li>
+            <li><a [routerLink]="['/cotizador']" (click)="toggleMenu()">COTIZADOR</a></li>
+            <li><a [routerLink]="['/blog']" (click)="toggleMenu()">BLOG</a></li>
+            <li><a href="#contacto" (click)="toggleMenu()">CONTACTO</a></li>
+            <li>
+                <a href="https://www.facebook.com/labnovamx/" target="_blanc" (click)="toggleMenu()"> <i class="fab fa-facebook text-white"></i>
+                </a>
+            </li>
+          <li>
+            <a href="tel:6188117230" style="font-weight: bold" (click)="toggleMenu()"><i class="fas fa-phone-alt pr-2"></i>618 8117230</a>
+          </li>
+            <li>
+                <a href="tel:6181753034" class="menu-item button button-rojo ml-3 px-3" (click)="toggleMenu()"><i class="fas fa-phone-alt pr-2"></i>Atención a hospitales</a>
+            </li>
+        </ul>
+    </nav>
+</header>

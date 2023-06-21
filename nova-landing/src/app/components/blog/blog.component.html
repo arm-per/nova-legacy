@@ -1,0 +1,17 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 my-3" *ngFor="let articulo of articulos">
+            <a [routerLink]="['/blog', articulo.id]" class="disable-style">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img [src]="articulo.imagen" [alt]="articulo.titulo">
+                    </div>
+                    <div class="p-1 p-md-3">
+                        <h3 class="card-title mb-0">{{ articulo.titulo }}</h3>
+                        <p class="my-1 text-right"><small>{{ articulo.fecha | date:'dd/MM/yyyy' }}</small></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

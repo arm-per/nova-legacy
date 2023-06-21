@@ -1,0 +1,562 @@
+/* You can add global styles to this file, and also import other style files */
+
+$azul_nova_claro: #048ABF;
+$azul_nova_black: #0367A6;
+$verde_nova: #9FBF2C;
+$rojo_nova: #F21B1B;
+$gris: #575757;
+
+/* NAVBAR */
+
+// nav {
+//   background: $azul_nova_black !important;
+//   border-bottom: 5px solid $verde_nova;
+//   height: 80px;
+// }
+.body {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+.menu-item {
+    font-size: 30px;
+}
+
+.redes {
+    font-size: 25px !important
+}
+
+
+/* PRINCIPAL */
+
+.bg-img-primary {
+    height: 100vh;
+}
+
+.em-triple {
+    font-size: 3em;
+}
+
+.em-cuatruple {
+    font-size: 4em;
+}
+
+.shadow-title {
+    text-shadow: 2px 2px 2px #fff;
+}
+
+.titulo-nova {
+    color: $azul_nova_black !important;
+    font-weight: bold;
+}
+
+.subtiltulo {
+    font-size: 15px;
+}
+
+.gris-nova {
+    color: #575757 !important;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 21px;
+}
+
+.button-verde {
+    background-color: $verde_nova;
+    color: #fff !important;
+}
+
+.button-azul {
+    background-color: $azul_nova_claro;
+    color: #fff !important;
+    &:hover {
+        background-color: rgba($azul_nova_claro, .8);
+        text-decoration: none;
+    }
+}
+
+.button-rojo {
+    background-color: $rojo_nova;
+    transition: .3s;
+    color: #fff !important;
+    &:hover {
+        background-color: rgba($rojo_nova, .8);
+        text-decoration: none;
+    }
+}
+
+.servicios-size {
+    font-size: 55px;
+}
+
+.bg-azul {
+    background-color: $azul_nova_black;
+}
+
+.bg-azul-claro {
+    background-color: $azul_nova_claro;
+}
+
+.white-line {
+    border-bottom: 2px solid white;
+}
+
+.margin-atencion {
+    color: $azul_nova_claro;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px;
+    border-style: solid;
+    border-color: $azul_nova_claro;
+}
+
+.compu-style {
+    background-image: url('./assets/images/compu_nova.png');
+    background-size: auto 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+.rojo-matraz {
+    background-image: url('./assets/images/rojomatraz.png');
+    background-size: auto 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+}
+
+.extra-azul {
+    background-color: $azul_nova_black;
+    padding: 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    text-align: right;
+    border-radius: 0 20px 20px 0;
+}
+
+.name-treatment {
+    font-size: .7em;
+}
+
+.text-blue {
+    color: $azul_nova_black;
+}
+
+.parse-html-text {
+    margin-bottom: 15px;
+    *,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+        font-size: 13px;
+        font-weight: normal;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+    }
+    br {
+        display: none;
+    }
+}
+
+.button-add {
+    border: 0px;
+    font-weight: bold;
+    background-color: #575757;
+    font-size: 15px;
+    color: #fff;
+}
+
+.add-title {
+    color: #575757;
+    font-size: 11px;
+    margin: 0px 5px;
+    font-weight: bold;
+}
+
+.full-height {
+    min-height: calc(100vh - 350px) !important;
+}
+
+.card-size {
+    min-height: 300px !important;
+}
+
+.disable-style:hover {
+    text-decoration: none;
+}
+
+.no-padding {
+    padding: 0px !important;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hijo {
+    display: flex;
+}
+
+.small-text {
+    font-size: 12px;
+    color: $gris;
+}
+
+.fab {
+    font-size: 1.5em;
+    padding: 0 10px;
+    color: $azul_nova_black;
+}
+
+.input {
+    margin-bottom: 15px !important;
+    border: 0px;
+    width: 100%;
+    border-bottom: 1px solid $azul_nova_claro !important;
+    color: $azul_nova_claro;
+    background-color: transparent;
+}
+
+.input::placeholder {
+    color: $azul_nova_claro !important;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.hs-responsive-embed {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hs-responsive-embed iframe,
+.hs-responsive-embed object,
+.hs-responsive-embed embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+.hs-responsive-embed,
+.hs-responsive-embed.hs-responsive-embed-youtube,
+.hs-responsive-embed.hs-responsive-embed-wistia,
+.hs-responsive-embed.hs-responsive-embed-vimeo {
+    padding-bottom: 56.25%;
+}
+
+// .video-container {
+// 	position: relative;
+//     padding-bottom: 56.25%; /* 16:9 */
+//     padding-top: 25px;
+//     height: 0;
+// }
+// .video-youtube {
+// 	position: absolute;
+//     width: 100% !important;
+//  	height: calc(100vw/2.5) !important;
+// }
+// MENU
+.ratio-16-9 {
+    width: 100%;
+    padding-top: 20%;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.menu_bar {
+    display: none;
+}
+
+header {
+    width: 100%;
+}
+
+header nav {
+    background: $azul_nova_black;
+    border-bottom: 5px solid $verde_nova;
+    z-index: 1000;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0px;
+}
+
+header nav ul li {
+    display: inline-block;
+    position: relative;
+}
+
+header nav ul li:hover {
+    background: $azul_nova_claro;
+}
+
+header nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a span {
+    margin-right: 10px;
+}
+
+header nav ul li:hover .children {
+    display: block;
+}
+
+header nav ul li .children {
+    display: none;
+    background: #011826;
+    position: absolute;
+    width: 150%;
+    z-index: 1000;
+}
+
+header nav ul li .children li {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+}
+
+header nav ul li .children li a {
+    display: block;
+}
+
+header nav ul li .children li a span {
+    float: right;
+    position: relative;
+    top: 3px;
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+header nav ul li .caret {
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+    margin-right: 0px;
+}
+
+.button-disabled {
+    background-color: $gris !important;
+    cursor: default;
+}
+
+//blog
+.blog-bg {
+    background-image: url(./assets/images/tubodeensayo.png);
+    background-position-y: top;
+    background-position-x: -80px!important;
+    background-repeat: no-repeat;
+    background-size: 300px;
+}
+.blog-comments {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top:1.5rem;
+    padding-left:15rem;
+}
+.blog-comment {
+    padding: 1rem 1.5rem;
+
+    &__user {
+        font-weight: 700;
+    }
+    &__content {
+        margin-left: 1rem;
+    }
+}
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+    opacity: 0;
+    transition: all .8s ease;
+}
+.card-hover {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+.card-hover .column#caption {
+    position: relative;
+    background-color: rgba(3,103,166,.5);
+}
+.card-hover .column {
+    display: inline-block;
+    text-align: center;
+}
+.card-hover a:hover {
+    text-decoration: none;
+    img {
+        mix-blend-mode: multiply;
+    }
+}
+a:hover {
+    outline: 0;
+}
+.card-hover:hover {
+    //background-color: rgba(3,103,166,.5);
+    .text {
+        opacity: 1;
+    }
+}
+
+.contacto-bg {
+
+    background-image: url(./assets/images/rojomatraz2.png);
+    background-position-y: bottom;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: auto;
+
+}
+
+
+@media screen and (max-width: 800px) {
+    body {
+        padding-top: 80px;
+    }
+    .menu_bar {
+        display: block;
+        width: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        background: $azul_nova_black;
+        border-bottom: 5px solid $verde_nova;
+    }
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .menu_bar span {
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    header nav {
+        width: 90%;
+        height: calc(100% - 77px);
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+    }
+    header nav ul li {
+        display: block;
+        border-bottom: 1px solid rgba( $verde_nova, .9);
+    }
+    header nav ul li a {
+        display: block;
+    }
+    header nav ul li:hover .children {
+        display: none;
+    }
+    header nav ul li .children {
+        width: 100%;
+        position: relative;
+    }
+    header nav ul li .children li a {
+        margin-left: 20px;
+    }
+    header nav ul li .caret {
+        float: right;
+    }
+    .ratio-16-9 {
+        width: 100%;
+        padding-top: 45%;
+        position: relative;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+}
+
+.openMenuMobile {
+    @media only screen and (max-width: 799px) {
+        transition: all .8s ease;
+        left: 0;
+    }
+}
+
+.closeMenuMobile {
+    @media only screen and (max-width: 799px) {
+        transition: all .8s ease;
+        left: -100%;
+    }
+}
+
+// RESPONSIVE
+@media only screen and (max-width: 778px) {
+
+    .contacto-bg, .blog-bg {
+        background-image: none;
+    }
+
+    .pay-card-img {
+        max-width: 30%;
+    }
+}
+
+@media only screen and (max-width: 975px) {
+    .compu-style {
+        background-image: none;
+    }
+    .rojo-matraz {
+        background-image: none;
+    }
+    .contacto-bg, .blog-bg {
+        background-image: none;
+    }
+}

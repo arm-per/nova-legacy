@@ -1,0 +1,13 @@
+
+<!--*ngIf="onGetLogin()"-->
+  <div id="main-wrapper">
+    <app-login *ngIf="!onGetLogin()"></app-login>
+
+    <app-header [ngClass]="{'hideElement': onGetLogin() === false}"></app-header>
+    <app-sidebar [ngClass]="{'hideElement': onGetLogin() === false}"></app-sidebar>
+    <div class="page-wrapper" *ngIf="onGetLogin()">
+      <div class="container-fluid">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div> 

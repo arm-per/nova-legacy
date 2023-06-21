@@ -1,0 +1,96 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-6 no-padding">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4333.743646397987!2d-104.65793993698972!3d24.022970969715352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5bd3f47c23c2f%3A0xa948eb2fa785f99b!2sLaboratorio%20de%20Analisis%20Clinicos%20Nova!5e0!3m2!1ses-419!2smx!4v1569443921065!5m2!1ses-419!2smx" class="col-12" height="100%" frameborder="0" allowfullscreen=""></iframe>
+      </div>
+      <div class="col-12 col-md-6 contacto-bg">
+        <h5 class="gris-nova font-weight-bolder servicios-size mb-0">CONTACTO</h5>
+        <h4 class="gris-nova m-0 mb-3">Estamos cerca de ti.</h4>
+        <div class="row">
+          <form (ngSubmit)="sendContacto(contacto)" #contacto="ngForm" class="col-md-8 col-sm-12" >
+            <input name="name" ngModel class=" input" type="text" placeholder="Nombre:*" required>
+            <input name="email" ngModel email class=" input" type="email" placeholder="email:*" required>
+            <textarea name="msn" ngModel class=" input" placeholder="Mensaje:*" required></textarea>
+            <button class="button button-verde col-5" [ngClass]="{'button-disabled': !contacto.form.valid}" [disabled]="!contacto.form.valid">ENVIAR</button>
+            <a class="center-text col-7" href="mailto:labnova@prodigy.net.mx">labnova@prodigy.net.mx</a>
+          </form>
+        </div>
+        <div class="row">
+          <h6 class="gris-nova my-3 col-12">TOMAS DE MUESTRA</h6>
+          <div class="col-6 gris-nova">
+            <small>
+              <p class="mb-0">
+                <strong>Matriz</strong>
+                <br>Av. Cuauhtémoc #609 Sur, Zona Centro C.P. 34000, Durango, Dgo.
+              </p>
+              <p class="mt-0">
+                Horario: <strong>Lunes a Sábado 7:30 a 20:00</strong>
+                <br><strong>Domingos y Días festivos 8:00 a 16:00</strong>
+              </p>
+            </small>
+          </div>
+
+          <div class="col-6">
+            <small>
+              <p>618 811 72 30 <br>
+                 <span style="font-weight: bold">618 158 8403 Whatsapp</span><br><span style="color: red; font-weight: bold;">618 175 30 34 (Exclusivo hospitales)</span></p>
+            </small>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6 gris-nova">
+            <small>
+              <p class="mb-0">
+                <strong>Punto Guadiana</strong>
+                <br>Paseo Loma Dorada, Planta baja, Av. Paseo Loma Bonita C.P. 34104, Durango, Dgo.
+              </p>
+              <p class="mt-0">Horario:
+                <strong>Lunes a Sábado 7:30 a 15:30</strong>
+              </p>
+            </small>
+          </div>
+
+          <div class="col-6">
+            <small>
+              <p>618 811 72 30</p>
+            </small>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-6 gris-nova">
+            <small>
+              <p class="mb-0">
+                <strong>Guadalupe Victoria</strong>
+                <br>José Ramón Valdez 105, Plaza Marsan, local 7 (Frente a la plaza principal)</p>
+                <p class="mt-0">Horario: <strong>Lunes a Sábado 7:30 a 13:30</strong></p>
+            </small>
+          </div>
+
+          <div class="col-6">
+            <small>
+              <p>618 811 72 30</p>
+            </small>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-12 gris-nova">
+            <small>
+              <p class="m-0">
+                <strong>Formas de pago</strong>
+              </p>
+            </small>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="row">
+              <img src="assets/icono/efectivo.png" alt="" class="col-md-4 img-fluid pay-card-img">
+              <img src="assets/icono/credito.png" alt="" class="col-md-4 img-fluid pay-card-img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

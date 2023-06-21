@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <h4 class="text-center gris-nova m-0 subtiltulo">Para mantenerte actualizado de nuestras innovaciones, contenido informativo y de interés, suscríbete a nuestro canal de YouTube.
+        <div class="g-ytsubscribe" data-channelid="UCp9wwNw9sUZSTp9JPfteTFw" data-layout="full" data-count="hidden"></div>
+    </h4>
+    <div class="hs-responsive-embed">
+        <iframe class="video-youtube" [src]="videoSelect | domseguro:'https://www.youtube.com/embed/'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-12">
+            <div uk-slider>
+                <ul id="slider" class="uk-slider-items uk-child-width-1-2 uk-child-width-1-4@s ">
+                    <li *ngFor="let video of playlist; let i = index">
+                        <button (click)="videoClip(i)" class="btn p-0" style="border: 0;">
+                      <img [src]="video.url_image" />
+                    </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br>
+
+</div>

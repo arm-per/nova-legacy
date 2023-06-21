@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6 col-md-6">
+            <input class="form-control" [(ngModel)]="query" placeholder="Buscar estudio" type="text">
+        </div>
+        <div class="col-6 col-md-6">
+            <button class="col-12 btn btn-primary" (click)="onAddNew()">Nuevo estudio</button>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 element element__title">Nombre</div>
+            <div class="col-7 element element__title">Condiciones</div>
+            <div class="col-1 element element__title">Precio</div>
+            <div class="col-1 element element__title">
+                <span>Acciones</span>
+            </div>
+        </div>
+        <div class="row" *ngFor="let estudio of estudios | estudioFilter:query">
+            <div class="col-3 element">{{estudio.nombre}}</div>
+            <div class="col-7 element">{{estudio.condiciones}}</div>
+            <div class="col-1 element">MX{{estudio.precio | currency}}</div>
+            <div class="col-1 element">
+                <button class="mx-1 btn btn-sm btn-primary" (click)="onEdit(estudio)"><i class="mdi mdi-pencil"></i></button>
+                <button class="mx-1 btn btn-sm btn-danger" (click)="onDelete(estudio.id)"><i class="mdi mdi-delete"></i></button>
+            </div>
+        </div>
+    </div>
+</div>

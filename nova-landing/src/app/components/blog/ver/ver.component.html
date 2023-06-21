@@ -1,0 +1,86 @@
+<div *ngIf="blogContent.imagen != null" class="ratio-16-9 col-12" [style.background-image]="'url(' + blogContent.imagen +')'"></div>
+<!-- <div *ngIf="blogContent.imagen != null" class="ratio-16-9 col-12" [ngStyle]="{'background-image': this.blogContent.imagen}"></div> -->
+
+<div class="container my-5">
+    <h2 class="font-weight-bolder servicios-size mb-0">{{ blogContent.titulo }}</h2>
+    <p class="mt-0">{{ blogContent.categoria }} | {{ blogContent.fecha | date: 'dd/MM/yyyy'}}</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="ql-editor py-1 px-2" [innerHTML]='sanitize( this.blogContent.editor )'></div>
+    </div>
+    <!-- <div class="row justify-content-end my-3">
+        COMPARTIR
+        <a href="#">
+            <span class="fab fa-facebook"></span>
+        </a>
+        <a href="#">
+            <span class="fab fa-twitter"></span>
+        </a>
+    </div> -->
+</div>
+
+<!-- ENTRADAS -->
+<div class="container my-5">
+    ENTRADAS RECIENTES
+    <hr>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4" *ngFor="let articulo of articulos">
+            <a [routerLink]="['/blog', articulo.id]">
+                <div class="uk-card uk-card-default">
+                    <div class="uk-card-media-top">
+                        <img [src]="articulo.imagen" [alt]="articulo.titulo">
+                    </div>
+                    <div class="p-3">
+                        <h3 class="card-title mb-0">{{ articulo.titulo }} </h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- COMENTARIOS -->
+<div class="container">
+    <form (ngSubmit)="onComment(comentario)" #comentario="ngForm">
+        COMENTARIOS
+    <hr>
+    <div class="form-group">
+        <label for="userName">Nombre *</label>
+        <input class="form-control" type="text" name="userName" ngModel #userName="ngModel" required>
+        <div [hidden]="userName.valid || userName.pristine" class="alert alert-danger">
+            El Nombre no puede estar vacio
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email *</label>
+        <input class="form-control" type="email" ngModel name="email" #email="ngModel" required>
+        <div [hidden]="email.valid || email.pristine" class="alert alert-danger">
+            El Correo electronico no puede estar vacio
+        </div>
+    </div>
+    <div class="form-group">
+        <textarea   ngModel 
+                    name="comment" 
+                    class="form-control" 
+                    placeholder="Dejanos tu comentario" 
+                    rows="5" 
+                    #comment="ngModel"
+                    required></textarea>
+    </div>
+    <div [hidden]="comment.valid || comment.pristine" class="alert alert-danger">
+        El comentario no puede estar vacio
+    </div>
+    <button class="button btn-primary col-3" 
+            [ngClass]="{'button-disabled': !comentario.form.valid}"
+            [disabled]="!comentario.form.valid">COMENTAR</button>
+    </form>
+    <div class="blog-comments">
+        <div class="blog-comment" *ngFor="let comment of blogContent.comentarios">
+            <hr>
+            <span class="blog-comment__user">{{comment.userName}}</span><span class="blog-comment__content">{{comment.comentario}}</span>
+        </div>
+    </div>
+    <!-- <textarea class="col-12 "  rows="5"></textarea> -->
+</div>

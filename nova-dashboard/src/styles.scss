@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+
+.banner {
+    max-height: 100px !important;
+    width: 100%;
+}
+
+.small-text {
+    font-size: .8em;
+}
+
+// .width {
+//     width: 100%;
+//     background: #F9D237;
+//     position: relative;
+//     display: inline-block;
+//     margin: 1%;
+//     vertical-align: top;
+//     box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+// }
+// .ratio1-1:before {
+//     padding-top: 100%;
+// }
+// .ratio2-1:before {
+//     padding-top: 50% !important;
+// }
+// .ratio4-3:before {
+//     padding-top: 75%;
+// }
+// .ratio16-9:before {
+//     padding-top: 56.25%;
+// }
+// .grid {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     place-items: start;
+// }
+// .grid>* {
+//     background: orange;
+//     width: 100%;
+// }
+// .grid>[style^='--aspect-ratio']::before {
+//     content: "";
+//     display: inline-block;
+//     width: 1px;
+//     height: 0;
+//     padding-bottom: calc(100% / (var(--aspect-ratio)));
+// }
+.ratio-16-9 {
+    background-color: #ccc;
+    width: 100%;
+    padding-top: 40%;
+    /* 1:1 Aspect Ratio */
+    position: relative;
+    /* If you want text inside of it */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    // img {
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    // }
+}
+.disabled {
+    background-color: #575757;
+    color: white;
+
+}
+.hideElement {
+    display: none;
+}
